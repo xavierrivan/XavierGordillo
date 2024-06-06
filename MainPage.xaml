@@ -1,0 +1,30 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XavierGordillo.MainPage">
+
+    <StackLayout Padding="20">
+        <Label Text="Número de Teléfono" FontSize="Medium" />
+        <Entry x:Name="phoneNumberEntry" Placeholder="Ingrese su número de teléfono" Keyboard="Telephone" />
+
+        <Label Text="Operador" FontSize="Medium" Margin="0,20,0,0" />
+        <Picker x:Name="operatorPicker">
+            <Picker.Items>
+                <x:String>Movi</x:String>
+                <x:String>Claro</x:String>
+                <x:String>Twenty</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Opciones de Recarga" FontSize="Medium" Margin="0,20,0,0" />
+        <Picker x:Name="rechargePicker">
+            <Picker.Items>
+                <x:String>$10</x:String>
+                <x:String>$20</x:String>
+                <x:String>$50</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Recargar" Clicked="OnRechargeClicked" Margin="0,20,0,0"/>
+    </StackLayout>
+
+</ContentPage>
